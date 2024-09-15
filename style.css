@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}  
+
+.first{
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(9, 18, 56, 0.882);
+    overflow: hidden;
+}
+
+.scroll{
+    width: 300%;
+    color: #fff;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0 , -50%);
+    animation: marquee 20s linear infinite;
+} 
+.scroll1{
+    display: flex;
+    justify-content: space-around;
+      gap: 30px;
+}
+.scroll1 h1{
+    width: 800px;
+    font-style: italic;
+    font-size: 17px;
+    
+}
+@keyframes marquee {
+    0% {left: 0;}
+    100% {left: -100%;}
+}
+.header{
+  height: min-content; 
+
+}
+header{
+    width: 100%;
+    height: 20svh;
+    padding: 1rem 3rem;
+    color: #fff;
+    background-color: #bfab88;  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.header .nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .nav .logo h4{
+width: 100px;
+border-top: 1px solid #fff;
+padding-top: 0.2rem;
+margin-left: 2rem;
+}
+
+.header .nav .shop{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.header .nav .search{
+    background-color: #fff;
+    width: 450px;
+    height: 50px;
+    border-radius: 22rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+.nav-links .fa-x{
+    display: none;
+}
+.header .nav .search input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 95%;
+    color: #fff;
+    font-size: 20px;
+}
+.header .nav .search i{
+   color: #4b4c5e;
+}
+.header .nav-links a{
+width: 70px;
+padding: 1rem;
+}
+.header .nav-links a{
+    width: 200px;
+}
+.header .nav-links a i{
+    margin-left: 0.3rem;
+
+}
+.nav .bars{
+    display: none;
+}
+.nav-links .sale{
+ color: #ff0000;
+
+ box-shadow: 0 0px 10px red;
+ border-radius: 50%;
+ border: 2px dashed red;
+}
+
+.swiper {
+    width: 100%;
+    height: 80vh;
+  }
+
+  .swiper-slide {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .sl-1{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+  
+  }
+  .swiper-slide .sl-1 img{
+     
+    width:  600px;
+    height: 600px;
+    object-fit: cover;
+    transition: all 2s;
+  }
+  .swiper-slide .sl-1 img:hover{
+    transform: translate(5px);
+  }
+  .swiper-slide .sl-1 .text{
+      background-color: #664e35;
+ 
+      background-position: center;
+      background-size: cover;
+  
+      color: #fff;;
+     padding: 5rem 1rem;
+     font-size: 20px;
+     line-height: 45px;
+     font-weight: 700;
+     background-image: url(images/zhao-yangyang-4uMRVFnJcP4-unsplash.jpg);
+     background-size: 50%  ;
+     background-position: top right;
+     background-repeat: no-repeat;
+     background-position-y: 0%;
+     transition:  all 1s;
+  }
+  .swiper-slide .sl-1 .text:hover{
+    background-position-y: 100%;
+  }
+  .swiper-slide .sl-1 .text button{
+      color: #53391d;
+padding: 1rem;
+outline: none;
+border: none;
+cursor: pointer;
+  }
+.brands{
+    height: 50vh;
+    width: 100%;
+    background-color: #efebea;
+    text-align: center;
+    padding: 5rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.brands .form {
+    display: flex;
+}
+.brands .form input{
+width: 300px;
+height: 60px;
+margin-right: 1rem;
+border: none;
+padding: 0.5rem;
+}
+.brands .form button{
+    padding: 1rem;
+    width: 100px;
+    color: #fff;
+    border: none;
+    background-color: #272b42;
+}
+.category{
+    width: 100%;
+    height: max-content;
+    background-color: #52556540;
+    display: grid;
+    gap: 10px;
+    padding: 1rem;
+    grid-template-columns: repeat(5, 5fr);
+}
+
+.category .circle{
+overflow: hidden;
+    padding: 0rem;
+    height: 34rem;
+    text-align: left;
+    position: relative;
+  
+}
+.category .circle img{
+    width: 280px;
+    height: 500px;
+border-radius: 20px;
+    object-fit: cover;
+z-index: -1;
+    position: relative;
+}
+.category .circle::before{
+    content: 'Descover';
+    position: absolute;
+    width: 100%;
+    height: 93%;
+ background-image:  linear-gradient(to bottom , rgba(59, 48, 3, 0) , rgba(91, 56, 4, 0.538)); 
+  display: flex;
+  justify-content: center;
+   align-items: center;
+   color: #fff;
+   top: 0;
+   border-radius: 20px;
+
+transform: translateX(0%);
+
+   cursor: pointer;
+   transition: all 0.6s;
+}
+.category .circle:hover::before{
+    transform: translateX(0%);
+    transform: translateX(100%);
+}
+.Brands{
+    width: 100%;
+    padding: 1rem 2rem;
+    height: 50svh;
+    text-align: left; 
+}
+.Brands h1{
+    margin-bottom: 2rem;
+}
+.Brands .inner{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+    gap: 15px;
+
+}
+
+.Brands .inner div{
+    text-align: center;
+    background-color: #e4e5ed69;
+    padding: 1rem;
+    width: 100%;
+
+}
+
+.Brands .inner div a{
+    color: #222;
+    font-size: 24PX;
+    text-align: left;
+}
+.Brands .inner div a:hover{
+    color: #eec090;
+}
+.bestSellers{
+    width: 100%;
+    height: 70svh;
+    padding: 1rem;
+
+}
+.bestSellers .part-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bestSellers .part-1 h4{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.cards{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.bestSellers .bsCard{
+    width: 310px;
+    height: 350px;
+    overflow: hidden;
+    padding: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #bfab88;
+}
+
+.bestSellers .bsCard:hover{
+    transform: rotatey(10deg);
+}
+.bestSellers .bsCard .card-img{
+    height: 180px;
+
+    margin-bottom: 2rem;
+
+}
+.bestSellers .bsCard .card-img img{
+    width:270px;
+    height: inherit;
+    object-fit: cover;
+}
+.programs{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    gap: 20px;
+    height: 47svh;
+
+}
+.programs .pro-1,
+.programs .pro-2{
+    border-radius: 20px;
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 25px;
+   color: #fff;
+   padding:1rem;
+   overflow: hidden;
+}
+
+.programs .pro-1 a,
+.programs .pro-2 a{
+margin-top: 1rem;
+    width: 170px;
+    background-color: #bfab88;
+    padding: 1rem;
+}
+.programs .pro-1{
+    background-image: url(images/living-room-8539237_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    background-position-y: 500px;
+
+}
+.programs .pro-2{
+    background-image: url(images/warion-taipei-8QIAj5tHDdc-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-position-y: 500px;
+}
+.subs{
+    width: 100%;
+    margin: 0 auto;
+    height: 10svh;
+    padding: 1rem;
+    background-color: #2d3146;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+.subs button{
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.about{
+    width: 100%;
+    height: 80svh;
+    background-color: #2d3146;
+    background-image: url(images/mitch-moondae-zXFtsdi9dIc-unsplash.jpg);
+    background-size: 50% 70%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.about .about-text{
+    width: 40%;
+    color: #fff;
+    padding: 4rem;
+}
+.about .about-text p{
+    line-height: 30px;
+    margin: 1.3rem 0;
+}
+.about .about-text button{
+    padding: 1rem;
+    cursor: pointer;
+}
+.shipping{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30svh;
+    padding: 1rem ;
+}
+.shipping .ship-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    }
+.shipping .ship-1 i{
+color: #d2d6eaad;
+font-size: 80px;
+
+}
+
+.footer{
+    width: 100%;
+    height: 50svh;
+    background-color: #cfd3e6a0;
+    padding: 1rem 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.footer h3{
+    counter-reset: #bbb;
+    padding-bottom: 1rem;
+}
+.footer div{
+    height: 150px;
+ 
+}
+.footer div a{
+    color: #222;
+}
+.footer div a:hover{
+    color: #c18f5a;
+}
+@media(max-width: 768px) {
+    .header .nav .search{
+        margin:  0 auto;
+        padding: 0;
+    }
+    .header .nav{
+        flex-direction: column;
+        position: relative;
+      
+     
+    }
+    .header .nav-links a{
+        width: 200px;
+    }
+    .header .nav .search{
+        height: 30px;
+        width: 250px;
+    }
+    .header .nav .shop{
+  position: absolute;
+  right: 2px;
+  top: 10px;
+    }
+    .nav .fa-bars{
+    display: block;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    left: -35px;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+      position: fixed;
+      right: 0;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      left: -100%;
+      background-color: #53391d94;
+
+    }
+    .nav-links.open{
+        left: 0;
+    }
+    .nav-links .fa-x{
+        display: block;
+        top: 0;
+        right: 10px;
+        position: absolute;
+    }
+    .nav-links .sale{
+        width: 60px !important;
+        height: 20px;
+        text-align: center;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: 1rem;
+    }
+    header{
+        height: auto;
+        padding-bottom: 2rem ;
+    }
+    .brands{
+        margin: 20rem  0 0.3rem ;
+      
+    }
+ 
+    .Brands .inner div{
+        text-align: center;
+        background-color: #e4e5ed69;
+        padding: 1rem;
+        width: 214px;
+    
+    }
+    .Brands .inner{
+     grid-template-columns: repeat(2 , 1fr);
+     height: auto;
+    
+    }
+    .category{
+        grid-template-columns: repeat(2, 5fr);
+    }
+    .cards{
+        height: auto;
+      padding: 1rem;
+        display: grid;
+   
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bestSellers .bsCard{
+        width: 210px;
+        height: auto;
+        padding: 0.5rem;
+        
+    }
+    .programs{
+     
+        margin-top: 600px;
+    
+    }
+    .programs .pro-1,
+    .programs .pro-2{
+        
+        padding: 1rem;
+        font-size: 20px;
+    }
+    .subs{
+        font-size: 16px;
+        padding: 1rem;
+        height: auto;
+    }
+   .about{
+        height: auto;
+        padding: 0;
+        background-size: 30% 40%;
+    }
+    .about .about-text{
+        height: 550px;
+        width: 60%;
+        padding: 1rem;
+    }
+    .shipping{
+        height: auto;
+        flex-direction: column;
+    }
+    .footer{
+        height: max-content;
+        padding: 3rem 2rem ;
+        align-items: start;
+    }
+    .footer div{
+        margin-bottom: 1rem;
+    }
+}
